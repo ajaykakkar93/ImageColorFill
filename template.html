@@ -1,0 +1,36 @@
+<div qv-extension style="height: 100%; position: relative; overflow: auto;" class="ng-scope">
+	
+	<style>
+		.container_ImageColorFill_{{layout.qInfo.qId}}, .container_ImageColorFill_{{layout.qInfo.qId}} .childBG, .Value_{{layout.qInfo.qId}}{
+			background:{{layout.bgColor}};
+			width:{{layout.ImgWidth}}%;
+		}
+		.container_ImageColorFill_{{layout.qInfo.qId}} .child{
+			background:#fff;
+		   /* width:100px;*/
+		}
+		.container_ImageColorFill_{{layout.qInfo.qId}} img{
+			width:{{layout.ImgWidth}}%;
+			height: {{layout.ImgHeight}}%;
+			position:absolute;
+			top:0px;
+		}
+		.container_ImageColorFill_{{layout.qInfo.qId}} .childBG{
+			display: contents;
+		}
+
+		.container_ImageColorFill_{{layout.qInfo.qId}} .childcont{
+			height:80%;
+		}
+	</style>
+	
+	<div class="container_ImageColorFill_{{layout.qInfo.qId}}" style="height: {{layout.ImgHeight}}%;">
+		<div class="childcont" style="">
+			<div class="child" style="height:{{(100 - layout.qHyperCube.qGrandTotalRow['0'].qText)}}%; " ></div>
+			<div class="childBG" style=""></div>
+		 </div>
+		 <img src="{{layout.myMedia}}">
+	</div>
+	
+		 <div class="Value_{{layout.qInfo.qId}}" style=" border-radius: 33px; color: #fff; text-align: center;font-size: 17px;position: absolute;bottom: 0px;" title="{{layout.qHyperCube.qGrandTotalRow['0'].qText}}">{{layout.qHyperCube.qGrandTotalRow['0'].qText}}%</div>
+</div>
